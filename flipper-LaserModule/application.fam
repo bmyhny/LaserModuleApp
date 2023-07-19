@@ -1,8 +1,8 @@
 App(
-    appid="LaserModule",
+    appid="lasermodule",
     name="LaserModule",
     apptype=FlipperAppType.EXTERNAL,
-    entry_point="LaserModule_app",
+    entry_point="lasermodule_app",
     cdefines=["APP_LASERMODULE"],
     requires=[
         "gui",
