@@ -64,14 +64,14 @@ static void flash_toggle(PluginState* const plugin_state) {
     }
 }
 
-int32_t flashlight_app() {
+int32_t LaserModule_app() {
     FuriMessageQueue* event_queue = furi_message_queue_alloc(8, sizeof(PluginEvent));
 
     PluginState* plugin_state = malloc(sizeof(PluginState));
 
     plugin_state->mutex = furi_mutex_alloc(FuriMutexTypeNormal);
     if(!plugin_state->mutex) {
-        FURI_LOG_E("flashlight", "cannot create mutex\r\n");
+        FURI_LOG_E("LaserModule", "cannot create mutex\r\n");
         furi_message_queue_free(event_queue);
         free(plugin_state);
         return 255;
